@@ -1,0 +1,19 @@
+Betreff: Letzter Versuch – {{ service }} für {{ company }}
+
+Hallo {{ contact_name }},
+
+dies ist meine letzte Nachricht, da ich großen Mehrwert erkenne.
+Wenn Sie kein Interesse haben, klicken Sie hier zum Abmelden:
+{{ unsubscribe_link }}
+
+Falls doch:
+<a href="https://YOUR_DOMAIN/track/click/{{ contact_id }}?url={{ booking_link|urlencode }}">
+  {{ booking_link }}
+</a>
+
+Datenschutz gemäß DSGVO.
+<img src="https://YOUR_DOMAIN/track/open/{{ contact_id }}" alt="" style="display:none"/>
+
+Herzliche Grüße
+Robert Alchimowicz
+EliteSites | Webdesign-Alcor

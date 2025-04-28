@@ -453,3 +453,332 @@
 2025-04-28 23:16:54,015 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:16:54] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=1&fields=firma,email,plz,homepage HTTP/1.1" 200 -
 2025-04-28 23:16:54,020 INFO root: CSV gespeichert: leads-installateur-wien-2025-04-28.csv
 2025-04-28 23:16:54,032 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:16:54] "POST /download HTTP/1.1" 200 -
+2025-04-28 23:25:57,739 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 23:25:57,739 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-28 23:25:57,801 ERROR leadscrapper: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\leadscrapper.py", line 59, in index
+    return render_template('index.html', history=history)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\templates\base.html", line 14, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\templates\index.html", line 116, in block 'content'
+    <td><a href="{{ url_for('history_detail', filename=h.Filename) }}">{{h.Filename}}</a></td>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'history_detail' with values ['filename']. Did you mean 'static' instead?
+2025-04-28 23:25:57,836 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:25:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 23:28:16,002 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 23:28:16,003 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-28 23:28:16,048 ERROR leadscrapper: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\leadscrapper.py", line 59, in index
+    return render_template('index.html', history=history)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\templates\base.html", line 14, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\templates\index.html", line 116, in block 'content'
+    <td><a href="{{ url_for('history_detail', filename=h.Filename) }}">{{h.Filename}}</a></td>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'history_detail' with values ['filename']. Did you mean 'static' instead?
+2025-04-28 23:28:16,051 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:28:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 23:29:51,222 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 23:29:51,222 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-28 23:29:51,268 ERROR leadscrapper: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\leadscrapper.py", line 59, in index
+    return render_template('index.html', history=history)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\templates\base.html", line 14, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\LeadScrapper_Alcor\app\templates\index.html", line 116, in block 'content'
+    <td><a href="{{ url_for('history_detail', filename=h.Filename) }}">{{h.Filename}}</a></td>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alchi\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'history_detail' with values ['filename']. Did you mean 'static' instead?
+2025-04-28 23:29:51,273 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:29:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 23:30:46,856 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 23:30:46,856 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-28 23:30:46,891 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:30:46] "[31m[1mGET / HTTP/1.1[0m" 405 -
+2025-04-28 23:34:51,098 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 23:34:51,098 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-28 23:37:15,864 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 23:37:15,864 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-28 23:37:15,866 INFO werkzeug:  * Restarting with stat
+2025-04-28 23:37:16,728 WARNING werkzeug:  * Debugger is active!
+2025-04-28 23:37:16,731 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-28 23:37:17,093 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 23:37:17,102 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 23:37:17,166 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:17] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-28 23:37:17,168 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:17] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-28 23:37:17,182 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:17] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-28 23:37:17,183 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:17] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-28 23:37:17,190 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:17] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=rpMnlfcewjgfK9dhDXld HTTP/1.1" 200 -
+2025-04-28 23:37:17,192 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:17] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=rpMnlfcewjgfK9dhDXld HTTP/1.1[0m" 304 -
+2025-04-28 23:37:17,226 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:17] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-28 23:37:17,233 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:17] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-28 23:37:26,919 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 23:37:26,919 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-28 23:37:26,921 INFO werkzeug:  * Restarting with stat
+2025-04-28 23:37:27,801 WARNING werkzeug:  * Debugger is active!
+2025-04-28 23:37:27,804 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-28 23:37:28,050 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 23:37:28,059 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:28] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-28 23:37:28,119 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:28] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-28 23:37:28,121 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:28] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-28 23:37:28,131 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:28] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-28 23:37:28,132 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:28] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-28 23:37:28,146 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:28] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=3GPuXWBfILeLYopEzTwY HTTP/1.1" 200 -
+2025-04-28 23:37:28,163 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:37:28] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=3GPuXWBfILeLYopEzTwY HTTP/1.1[0m" 304 -
+2025-04-28 23:39:50,983 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 23:39:50,984 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-28 23:39:50,985 INFO werkzeug:  * Restarting with stat
+2025-04-28 23:39:51,865 WARNING werkzeug:  * Debugger is active!
+2025-04-28 23:39:51,868 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-28 23:39:52,103 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:39:52] "GET / HTTP/1.1" 200 -
+2025-04-28 23:39:52,105 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:39:52] "GET / HTTP/1.1" 200 -
+2025-04-28 23:39:52,175 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:39:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 23:39:52,178 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:39:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 23:39:52,196 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:39:52] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-28 23:39:52,198 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:39:52] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-28 23:40:06,417 INFO root: Seite 1: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-28 23:40:07,984 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:40:07] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=1&fields=firma,telefon,email,adresse,plz,ortname,homepage HTTP/1.1" 200 -
+2025-04-28 23:40:16,949 INFO root: CSV gespeichert: leads-installateur-wien-2025-04-28.csv
+2025-04-28 23:40:16,961 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:40:16] "POST /download HTTP/1.1" 200 -
+2025-04-28 23:44:40,961 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 23:44:40,961 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-28 23:44:40,962 INFO werkzeug:  * Restarting with stat
+2025-04-28 23:44:41,831 WARNING werkzeug:  * Debugger is active!
+2025-04-28 23:44:41,834 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-28 23:44:42,079 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:44:42] "GET / HTTP/1.1" 200 -
+2025-04-28 23:44:42,080 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:44:42] "GET / HTTP/1.1" 200 -
+2025-04-28 23:44:42,148 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:44:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 23:44:42,149 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:44:42] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 23:44:42,156 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:44:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-28 23:44:42,158 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:44:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-28 23:45:25,147 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\leadscrapper.py', reloading
+2025-04-28 23:45:25,198 INFO werkzeug:  * Restarting with stat
+2025-04-28 23:45:26,014 WARNING werkzeug:  * Debugger is active!
+2025-04-28 23:45:26,016 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-28 23:45:36,033 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-28 23:45:36,033 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-28 23:45:36,034 INFO werkzeug:  * Restarting with stat
+2025-04-28 23:45:36,855 WARNING werkzeug:  * Debugger is active!
+2025-04-28 23:45:36,858 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-28 23:45:37,089 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:45:37] "GET / HTTP/1.1" 200 -
+2025-04-28 23:45:37,146 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:45:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-28 23:45:37,156 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:45:37] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-28 23:46:23,205 INFO root: Seite 1: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-28 23:46:24,849 INFO werkzeug: 127.0.0.1 - - [28/Apr/2025 23:46:24] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=28&fields=firma,email,plz,homepage HTTP/1.1" 200 -
+2025-04-28 23:46:34,252 INFO root: Seite 2: https://www.herold.at/gelbe-seiten/wien/installateur/?page=2
+2025-04-28 23:46:45,069 INFO root: Seite 3: https://www.herold.at/gelbe-seiten/wien/installateur/?page=3
+2025-04-28 23:46:55,869 INFO root: Seite 4: https://www.herold.at/gelbe-seiten/wien/installateur/?page=4
+2025-04-28 23:47:05,408 INFO root: Seite 5: https://www.herold.at/gelbe-seiten/wien/installateur/?page=5
+2025-04-28 23:47:14,987 INFO root: Seite 6: https://www.herold.at/gelbe-seiten/wien/installateur/?page=6
+2025-04-28 23:47:25,164 INFO root: Seite 7: https://www.herold.at/gelbe-seiten/wien/installateur/?page=7
+2025-04-28 23:47:34,896 INFO root: Seite 8: https://www.herold.at/gelbe-seiten/wien/installateur/?page=8
+2025-04-28 23:47:44,453 INFO root: Seite 9: https://www.herold.at/gelbe-seiten/wien/installateur/?page=9
+2025-04-28 23:47:54,282 INFO root: Seite 10: https://www.herold.at/gelbe-seiten/wien/installateur/?page=10
+2025-04-28 23:48:03,663 INFO root: Seite 11: https://www.herold.at/gelbe-seiten/wien/installateur/?page=11
+2025-04-28 23:48:13,316 INFO root: Seite 12: https://www.herold.at/gelbe-seiten/wien/installateur/?page=12
+2025-04-28 23:48:23,019 INFO root: Seite 13: https://www.herold.at/gelbe-seiten/wien/installateur/?page=13
+2025-04-28 23:48:33,056 INFO root: Seite 14: https://www.herold.at/gelbe-seiten/wien/installateur/?page=14
+2025-04-28 23:48:43,090 INFO root: Seite 15: https://www.herold.at/gelbe-seiten/wien/installateur/?page=15
+2025-04-28 23:48:52,678 INFO root: Seite 16: https://www.herold.at/gelbe-seiten/wien/installateur/?page=16
+2025-04-28 23:49:02,095 INFO root: Seite 17: https://www.herold.at/gelbe-seiten/wien/installateur/?page=17
+2025-04-28 23:49:11,804 INFO root: Seite 18: https://www.herold.at/gelbe-seiten/wien/installateur/?page=18
+2025-04-28 23:49:21,247 INFO root: Seite 19: https://www.herold.at/gelbe-seiten/wien/installateur/?page=19
+2025-04-28 23:49:30,934 INFO root: Seite 20: https://www.herold.at/gelbe-seiten/wien/installateur/?page=20
+2025-04-28 23:49:40,644 INFO root: Seite 21: https://www.herold.at/gelbe-seiten/wien/installateur/?page=21
+2025-04-28 23:49:50,384 INFO root: Seite 22: https://www.herold.at/gelbe-seiten/wien/installateur/?page=22
+2025-04-28 23:50:00,568 INFO root: Seite 23: https://www.herold.at/gelbe-seiten/wien/installateur/?page=23
+2025-04-28 23:50:10,145 INFO root: Seite 24: https://www.herold.at/gelbe-seiten/wien/installateur/?page=24
+2025-04-28 23:50:19,631 INFO root: Seite 25: https://www.herold.at/gelbe-seiten/wien/installateur/?page=25
+2025-04-28 23:50:24,897 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\__init__.py', reloading
+2025-04-28 23:50:25,013 INFO werkzeug:  * Restarting with stat
+2025-04-28 23:50:25,844 WARNING werkzeug:  * Debugger is active!
+2025-04-28 23:50:25,847 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 00:26:05,197 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 00:26:05,197 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 00:26:05,198 INFO werkzeug:  * Restarting with stat
+2025-04-29 00:26:06,022 WARNING werkzeug:  * Debugger is active!
+2025-04-29 00:26:06,025 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 00:26:06,278 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:26:06] "GET / HTTP/1.1" 200 -
+2025-04-29 00:26:06,357 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:26:06] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 00:26:06,358 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:26:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 00:26:44,370 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:26:44] "[32mGET /email-dashboard/leads-installateur-wien-2025-04-28.csv HTTP/1.1[0m" 302 -
+2025-04-29 00:26:44,376 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:26:44] "GET / HTTP/1.1" 200 -
+2025-04-29 00:26:44,407 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:26:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 00:26:44,408 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:26:44] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 00:37:40,373 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 00:37:40,373 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 00:37:40,373 INFO werkzeug:  * Restarting with stat
+2025-04-29 00:37:41,207 WARNING werkzeug:  * Debugger is active!
+2025-04-29 00:37:41,209 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 00:37:41,517 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:37:41] "GET / HTTP/1.1" 200 -
+2025-04-29 00:37:41,593 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:37:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 00:37:41,595 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:37:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 00:38:04,560 INFO root: Seite 1: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 00:38:06,226 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:38:06] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=20&fields=firma,email,plz,homepage HTTP/1.1" 200 -
+2025-04-29 00:38:15,441 INFO root: Seite 2: https://www.herold.at/gelbe-seiten/wien/installateur/?page=2
+2025-04-29 00:38:24,914 INFO root: Seite 3: https://www.herold.at/gelbe-seiten/wien/installateur/?page=3
+2025-04-29 00:38:34,513 INFO root: Seite 4: https://www.herold.at/gelbe-seiten/wien/installateur/?page=4
+2025-04-29 00:38:44,205 INFO root: Seite 5: https://www.herold.at/gelbe-seiten/wien/installateur/?page=5
+2025-04-29 00:38:53,789 INFO root: Seite 6: https://www.herold.at/gelbe-seiten/wien/installateur/?page=6
+2025-04-29 00:39:03,630 INFO root: Seite 7: https://www.herold.at/gelbe-seiten/wien/installateur/?page=7
+2025-04-29 00:39:13,637 INFO root: Seite 8: https://www.herold.at/gelbe-seiten/wien/installateur/?page=8
+2025-04-29 00:39:23,670 INFO root: Seite 9: https://www.herold.at/gelbe-seiten/wien/installateur/?page=9
+2025-04-29 00:39:33,196 INFO root: Seite 10: https://www.herold.at/gelbe-seiten/wien/installateur/?page=10
+2025-04-29 00:39:43,616 INFO root: Seite 11: https://www.herold.at/gelbe-seiten/wien/installateur/?page=11
+2025-04-29 00:39:53,268 INFO root: Seite 12: https://www.herold.at/gelbe-seiten/wien/installateur/?page=12
+2025-04-29 00:40:02,805 INFO root: Seite 13: https://www.herold.at/gelbe-seiten/wien/installateur/?page=13
+2025-04-29 00:40:12,109 INFO root: Seite 14: https://www.herold.at/gelbe-seiten/wien/installateur/?page=14
+2025-04-29 00:40:21,754 INFO root: Seite 15: https://www.herold.at/gelbe-seiten/wien/installateur/?page=15
+2025-04-29 00:40:31,455 INFO root: Seite 16: https://www.herold.at/gelbe-seiten/wien/installateur/?page=16
+2025-04-29 00:40:41,059 INFO root: Seite 17: https://www.herold.at/gelbe-seiten/wien/installateur/?page=17
+2025-04-29 00:40:50,395 INFO root: Seite 18: https://www.herold.at/gelbe-seiten/wien/installateur/?page=18
+2025-04-29 00:40:59,793 INFO root: Seite 19: https://www.herold.at/gelbe-seiten/wien/installateur/?page=19
+2025-04-29 00:41:09,317 INFO root: Seite 20: https://www.herold.at/gelbe-seiten/wien/installateur/?page=20
+2025-04-29 00:41:18,865 INFO root: CSV gespeichert: leads-installateur-wien-2025-04-29.csv
+2025-04-29 00:41:30,570 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:41:30] "GET / HTTP/1.1" 200 -
+2025-04-29 00:41:30,598 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:41:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 00:41:30,600 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:41:30] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 00:41:43,608 INFO root: Seite 1: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 00:41:44,139 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:41:44] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=5&fields=firma,email,plz,ortname,homepage HTTP/1.1" 200 -
+2025-04-29 00:41:53,415 INFO root: Seite 2: https://www.herold.at/gelbe-seiten/wien/installateur/?page=2
+2025-04-29 00:41:54,039 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:41:54] "GET /history/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 00:41:54,067 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:41:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 00:41:54,067 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:41:54] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 00:42:05,004 INFO root: Seite 3: https://www.herold.at/gelbe-seiten/wien/installateur/?page=3
+2025-04-29 00:42:15,282 INFO root: Seite 4: https://www.herold.at/gelbe-seiten/wien/installateur/?page=4
+2025-04-29 00:42:25,411 INFO root: Seite 5: https://www.herold.at/gelbe-seiten/wien/installateur/?page=5
+2025-04-29 00:42:35,884 INFO root: CSV gespeichert: leads-installateur-wien-2025-04-29.csv
+2025-04-29 00:42:35,903 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:42:35] "POST /download HTTP/1.1" 200 -
+2025-04-29 00:44:39,545 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:44:39] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 00:44:39,574 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:44:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 00:44:39,577 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 00:44:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 00:57:05,897 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\leadscrapper.py', reloading
+2025-04-29 00:57:06,006 INFO werkzeug:  * Restarting with stat
+2025-04-29 00:57:06,879 WARNING werkzeug:  * Debugger is active!
+2025-04-29 00:57:06,882 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 00:57:09,758 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\leadscrapper.py', reloading
+2025-04-29 00:57:09,807 INFO werkzeug:  * Restarting with stat
+2025-04-29 00:57:10,639 WARNING werkzeug:  * Debugger is active!
+2025-04-29 00:57:10,642 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 01:01:50,444 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\leadscrapper.py', reloading
+2025-04-29 01:01:50,502 INFO werkzeug:  * Restarting with stat
+2025-04-29 01:01:51,370 WARNING werkzeug:  * Debugger is active!
+2025-04-29 01:01:51,373 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 01:02:52,261 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\scraper.py', reloading
+2025-04-29 01:02:52,319 INFO werkzeug:  * Restarting with stat
+2025-04-29 01:02:53,161 WARNING werkzeug:  * Debugger is active!
+2025-04-29 01:02:53,164 INFO werkzeug:  * Debugger PIN: 862-041-702

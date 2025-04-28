@@ -1,0 +1,19 @@
+Betreff: Re: Interesse an {{ service }} in {{ city }}?
+
+Hallo {{ contact_name }},
+
+ich hoffe, meine letzte E-Mail ist angekommen.
+Als Robert Alchimowicz von EliteSites & Webdesign-Alcor erinnere ich Sie gerne,
+dass wir {{ benefit }} erzielen.
+
+Termin finden:
+<a href="https://YOUR_DOMAIN/track/click/{{ contact_id }}?url={{ booking_link|urlencode }}">
+  {{ booking_link }}
+</a>
+
+<img src="https://YOUR_DOMAIN/track/open/{{ contact_id }}" alt="" style="display:none"/>
+
+Abmeldung: {{ unsubscribe_link }}
+
+Beste Grüße
+Robert Alchimowicz

@@ -1,16 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
-  <div class="container">
-    <a class="navbar-brand" href="#"><i class="bi bi-search"></i> LeadScrapper</a>
-  </div>
-</nav>
-
 <div class="container py-4">
+  <!-- Flash -->
   {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
-  {% for cat, msg in messages %}
-  <div class="alert alert-{{ cat }} alert-dismissible fade show" role="alert">
+  {% for cat,msg in messages %}
+  <div class="alert alert-{{cat}} alert-dismissible fade show" role="alert">
     {{ msg }}
     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
   </div>
@@ -18,6 +13,7 @@
   {% endif %}
   {% endwith %}
 
+  <!-- 1) Scraper-Formular -->
   <div class="card shadow-sm mb-4">
     <div class="card-body">
       <form id="scrape-form">
@@ -38,7 +34,6 @@
             </button>
           </div>
         </div>
-
         <div class="mt-4 card border-secondary shadow-sm">
           <div class="card-header bg-secondary text-white">Felder auswählen</div>
           <div class="card-body">
@@ -52,12 +47,11 @@
               ('ortname','Ort'),
               ('homepage','Homepage')
               ] %}
-
               {% for val,label in options %}
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="feld-{{ val }}" name="felder" value="{{ val }}" {%
-                  if val=='firma' %}checked{% endif %}>
-                <label class="form-check-label" for="feld-{{ val }}">{{ label }}</label>
+                <input class="form-check-input" type="checkbox" id="feld-{{val}}" name="felder" value="{{val}}" {% if
+                  val=='firma' %}checked{% endif %}>
+                <label class="form-check-label" for="feld-{{val}}">{{label}}</label>
               </div>
               {% endfor %}
             </div>
@@ -67,14 +61,14 @@
     </div>
   </div>
 
-  <!-- Fortschritt & Zähler -->
+  <!-- 2) Fortschritt & Zähler -->
   <div class="row mb-4">
     <div class="col-md-8 mb-3">
       <div class="card">
         <div class="card-header"><i class="bi bi-bar-chart-line-fill"></i> Fortschritt</div>
         <div class="card-body">
           <div class="progress">
-            <div id="progress-bar" class="progress-bar" role="progressbar" style="width:0%">0%</div>
+            <div id="progress-bar" class="progress-bar" style="width:0%">0%</div>
           </div>
         </div>
       </div>
@@ -89,15 +83,15 @@
     </div>
   </div>
 
-  <!-- Logs -->
+  <!-- 3) Logs -->
   <div class="card mb-4">
     <div class="card-header"><i class="bi bi-journal-text"></i> Logs</div>
-    <div class="card-body" style="max-height:200px;overflow-y:auto">
+    <div class="card-body" style="max-height:200px; overflow-y:auto">
       <ul id="logs-list" class="list-unstyled mb-0"></ul>
     </div>
   </div>
 
-  <!-- History-Tabelle -->
+  <!-- 4) Such-Historie -->
   <div class="card mb-5">
     <div class="card-header"><i class="bi bi-clock-history"></i> Suchhistorie</div>
     <div class="card-body p-0">
@@ -110,6 +104,7 @@
               <th>Seiten</th>
               <th>Felder</th>
               <th>Datei</th>
+              <th>Email-Dashboard</th>
             </tr>
           </thead>
           <tbody>
@@ -119,7 +114,16 @@
               <td><a href="{{ h.Website }}" target="_blank">{{ h.Website }}</a></td>
               <td>{{ h.Pages }}</td>
               <td>{{ h.Fields }}</td>
-              <td><a href="{{ url_for('history_detail', filename=h.Filename) }}">{{ h.Filename }}</a></td>
+              <td>
+                <a href="{{ url_for('history_detail', filename=h.Filename) }}">
+                  {{ h.Filename }}
+                </a>
+              </td>
+              <td>
+                <a href="{{ url_for('email_dashboard', filename=h.Filename) }}" class="btn btn-outline-primary btn-sm">
+                  Email-Dashboard
+                </a>
+              </td>
             </tr>
             {% endfor %}
           </tbody>

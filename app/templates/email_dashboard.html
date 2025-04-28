@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-4">
+  <h3>Email-Dashboard – {{ filename }}</h3>
+
+  <!-- Segmentierung: PLZ-Filter -->
+  <div class="mb-3">
+    <label for="plz-filter" class="form-label">Filter nach PLZ:</label>
+    <input id="plz-filter" class="form-control" placeholder="z. B. 1010">
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>#</th>
+          <th>Firma</th>
+          <th>Telefon</th>
+          <th>E-Mail</th>
+          <th>Vorlage</th>
+          <th>Aktion</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for lead in leads %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ lead.Firma }}</td>
+          <td>{{ lead.Telefon }}</td>
+          <td>{{ lead.Email }}</td>
+          <td>
+            <textarea class="template-editor form-control" rows="2">
+              {% raw %}{{ lead.Firma }}{% endraw %}
+            </textarea>
+          </td>
+          <td>
+            <button class="btn btn-sm btn-primary send-btn" data-idx="{{ loop.index0 }}">Vorschau/Senden</button>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TinyMCE & Segmentierung -->
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // WYSIWYG
+    tinymce.init({
+      selector: '.template-editor',
+      menubar: false,
+      toolbar: 'undo redo | bold italic underline | link'
+    });
+
+    // PLZ-Filter
+    document.getElementById('plz-filter').addEventListener('input', e => {
+      const val = e.target.value.trim().toLowerCase();
+      document.querySelectorAll('tbody tr').forEach(row => {
+        const plz = row.cells[3].textContent.trim().toLowerCase();
+        row.style.display = plz.includes(val) ? '' : 'none';
+      });
+    });
+
+    // Preview/Senden → nutzen wir AJAX im email_preview.html
+  });
+</script>
+{% endblock %}

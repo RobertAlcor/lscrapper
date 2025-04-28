@@ -1,0 +1,22 @@
+Betreff: {{ company }} – Interesse an {{ service }}?
+
+Hallo {{ contact_name }},
+
+mein Name ist Robert Alchimowicz von EliteSites (https://elitesites.at),
+einer Gruppe von Webdesign-Alcor (https://www.webdesign-alcor.at).
+Wir unterstützen {{ industry }}-Unternehmen in {{ city }}, {{ benefit }}.
+
+Möchten Sie in einem kurzen, unverbindlichen Gespräch mehr erfahren?
+Buchen Sie direkt:
+<a href="https://YOUR_DOMAIN/track/click/{{ contact_id }}?url={{ booking_link|urlencode }}">
+  {{ booking_link }}
+</a>
+
+<img src="https://YOUR_DOMAIN/track/open/{{ contact_id }}" alt="" style="display:none"/>
+
+Wenn Sie keine weiteren E-Mails wünschen, klicken Sie hier zum Abmelden:
+{{ unsubscribe_link }}
+
+Mit freundlichen Grüßen
+Robert Alchimowicz
+EliteSites | Webdesign-Alcor
