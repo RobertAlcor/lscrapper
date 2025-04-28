@@ -12,9 +12,7 @@
       <tbody>
         {% for row in records %}
         <tr>
-          {% for c in cols %}
-          <td>{{ row[c] }}</td>
-          {% endfor %}
+          {% for c in cols %}<td>{{ row[c] }}</td>{% endfor %}
         </tr>
         {% endfor %}
       </tbody>
