@@ -1,21 +1,28 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
-*$py.class
 
-# Virtual environments
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+*.spec
+
+# Installer
+dist_installer/
+
+# Executables
+*.exe
+*.pkg
+
+# Environments
 .env
-.env.example
 .venv/
 venv/
 
-# Logs and output
-logs/
-output/
-
-# IDE settings
+# VS Code
 .vscode/
 
-# OS files
+# OS system files
 .DS_Store
 Thumbs.db
