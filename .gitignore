@@ -1,0 +1,55 @@
+# Bytecode-Dateien
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtuelle Umgebungen
+venv/
+env/
+.venv/
+
+# Umgebungs­variablen
+.env
+.env.*
+
+# Logs & Historie
+/logs/
+/app/logs/
+/logs/*
+logs/*
+app/logs/*
+*search_history.csv
+*app.log
+
+# Ausgabeverzeichnis
+/output/
+/app/output/
+
+# Lizenz­schlüssel (nur lokal)
+/valid_keys.txt
+
+# OS-spezifische Dateien
+.DS_Store
+Thumbs.db
+
+# Editor- und IDE-Einstellungen
+.vscode/
+.idea/
+*.suo
+*.sw?
+
+# Distributionspakete
+dist/
+build/
+*.egg-info/
+
+# Installationsreste
+install.bat
+LeadScrapperInstaller.iss
+
+# Optional: wenn du valid_proxies.txt nicht versionieren willst
+# valid_proxies.txt
+
+gen_license.py
+
+valid_keys.txt
