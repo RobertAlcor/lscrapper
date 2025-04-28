@@ -115,3 +115,4 @@ Unit-Tests: Mit pytest & Mock-Responses geplant.
 ⚖️ Lizenz & Autor
 LeadScrapper – © 2025 Robert Alchimowicz
 Lizenz: MIT
+# lscrapper
