@@ -1,118 +1,195 @@
-# LeadScrapper
+# 🕵️‍♂️ LeadScrapper
 
-Ein moderner Web-Scraper und Dashboard für die **Herold.at Gelbe Seiten**, umgesetzt als Flask-Web-App mit Download-Funktion und Windows-Installer.
-
----
-
-## 📝 Features
-
-- **Flexibles Scraping**: Wähle aus, welche Felder (Firma, Telefon, E-Mail, Adresse, PLZ, Ort) du sammeln möchtest.
-- **Mehrseiten-Support**: Rufe automatisch mehrere Ergebnis-Seiten ab.
-- **Search-History**: Jede Suchanfrage wird protokolliert und im Dashboard als Verlauf angezeigt.
-- **CSV-Export**: Ergebnisse als CSV-Datei herunterladen.
-- **Windows-Installer**: Erstelle eine portable EXE plus Setup mit PyInstaller & Inno Setup.
+Einsteiger-Anleitung für „Dummy“-Nutzer – verständlich, Schritt für Schritt.
 
 ---
 
-## 🚀 Schnellstart
+## 📋 Inhaltsverzeichnis
 
-### 1. Repository klonen
+1. [🚀 Features](#-features)
+2. [✅ Voraussetzungen](#-voraussetzungen)
+3. [🔧 Installation](#-installation)
+4. [⚙️ Konfiguration](#️-konfiguration)
+5. [▶️ Anwendung starten](#️-anwendung-starten)
+6. [🛠️ Nutzung](#️-nutzung)
+   - [1. Scrapen](#1-scrapen)
+   - [2. Historie](#2-historie)
+   - [3. E-Mail-Dashboard](#3-e-mail-dashboard)
+7. [📂 Projektstruktur](#-projektstruktur)
+8. [🔒 Lizenz](#-lizenz)
 
-```bash
-git clone https://github.com/RobertAlcor/LeadScrapper_Alcor.git
-cd LeadScrapper_Alcor
-2. Abhängigkeiten installieren
+---
+
+## 🚀 Features
+
+- **Seiten-Scraping**
+
+  - Mehrere Seiten automatisch abfragen
+  - Detail-Infos (Telefon, E-Mail, Adresse, PLZ, Ort, Homepage)
+  - Proxy-Rotation über `valid_proxies.txt`
+
+- **Live-Feedback**
+
+  - Fortschrittsbalken & Logausgaben im Browser
+  - Echtzeit-Zähler für gefundene Leads
+
+- **CSV-Export**
+
+  - Unicode (UTF-8-SIG) mit BOM
+  - Automatisch optimierter Dateiname
+    ```
+    leads-{suchbegriff}-{stadt}-{YYYY-MM-DD}.csv
+    ```
+
+- **Such-Historie**
+
+  - Protokollierung in `logs/search_history.csv`
+  - Download & Detail-Ansicht jeder CSV
+
+- **E-Mail-Dashboard**
+  - TinyMCE WYSIWYG-Editor für Vorlagen
+  - SMTP-Versand direkt aus der Web-App
+  - Optionales Open-Pixel & Klick-Tracking
+
+---
+
+## ✅ Voraussetzungen
+
+- **Python 3.12+**
+- **pip** (Python-Paketmanager)
+
+---
+
+## 🔧 Installation
+
+1. **Repo klonen**
+   ```bash
+   git clone https://github.com/RobertAlcor/lscrapper.git
+   cd lscrapper
+   Virtuelle Umgebung anlegen
+   ```
+
 bash
-Kopieren
-Bearbeiten
-python -m venv venv
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
+python3 -m venv venv
+
+# Linux/macOS:
+
 source venv/bin/activate
 
-pip install --upgrade pip
-pip install -r requirements.txt
-3. Environment-Variablen
-Kopiere die Beispiel-Datei:
+# Windows:
+
+venv\Scripts\activate
+Abhängigkeiten installieren
 
 bash
-Kopieren
-Bearbeiten
-copy .env.example .env
-Öffne .env und fülle die Werte aus:
+pip install -r requirements.txt
+(Optional) Proxies
+
+valid_proxies.txt im Projekt-Root befüllen (je eine Adresse pro Zeile).
+
+⚙️ Konfiguration
+Lege im Projekt-Root eine Datei .env mit Platzhaltern (ohne echte Passwörter):
 
 dotenv
-Kopieren
-Bearbeiten
-FLASK_SECRET=dein_geheimer_schluessel
-APP_VERSION=1.0.0
-USER_AGENTS=["Mozilla/...","Mozilla/...","Mozilla/..."]
-GITHUB_REPO=RobertAlcor/LeadScrapper
-4. App starten
-bash
-Kopieren
-Bearbeiten
-# Windows PowerShell
-$env:FLASK_APP = "app.leadscrapper"
-$env:FLASK_ENV = "development"
-flask run
 
-# macOS/Linux
+# 🔒 Sicherheit
+
+FLASK_SECRET=DeinGeheimerSessionKey
+
+# 🌐 Flask
+
+FLASK_HOST=127.0.0.1
+FLASK_PORT=5000
+FLASK_ENV=development
+
+# 🤖 Scraper
+
+USER_AGENTS=["Mozilla/5.0","Safari/537.36"]
+REQUEST_TIMEOUT=10
+
+# ✉️ SMTP (E-Mail Versand)
+
+SMTP_HOST=mail.example.com
+SMTP_PORT=587
+SMTP_USER=you@example.com
+SMTP_PASSWORD=DeinSMTPPasswort
+FLASK_SECRET: Zufälliger Schlüssel für Sessions/Flash-Meldungen.
+
+USER_AGENTS: Liste von Browser-User-Agents.
+
+REQUEST_TIMEOUT: Sekunden bis Timeout pro Anfrage.
+
+SMTP\_\*: Zugangsdaten für Deinen Mailserver.
+
+▶️ Anwendung starten
+bash
 export FLASK_APP=app.leadscrapper
 export FLASK_ENV=development
 flask run
-Dann im Browser öffnen: http://127.0.0.1:5000
+Windows PowerShell:
 
-🏗️ Projekt-Struktur
-csharp
-Kopieren
-Bearbeiten
-LeadScrapper_Alcor/            # Projekt-Root
-├── .env                      # Lokale Konfiguration (nicht ins Git!)
-├── .env.example              # Vorlage für .env
-├── README.md                 # Diese Datei
-├── requirements.txt          # Python-Abhängigkeiten
-├── install.bat               # Build- & Installer-Script
-├── leadscrapper.spec         # PyInstaller-Spec (optional)
-├── Installer/                # Inno-Setup Dateien
-│   ├── LeadScrapperInstaller.iss
-│   └── scraper.ico
-└── app/                      # Haupt-App
-    ├── __init__.py           # macht app/ zum Python-Paket
-    ├── leadscrapper.py       # Flask-Entry-Point & Routing
-    ├── scraper.py            # Scraping-Logik (BeautifulSoup)
-    ├── utils.py              # Helper (Pfad, History, .env-Laden)
-    ├── output/               # generierte CSVs
-    ├── logs/                 # Such-History (search_history.csv)
-    ├── static/               # Statische Assets
-    │   ├── styles.css
-    │   └── script.js
-    └── templates/            # Jinja-Templates
-        ├── base.html
-        ├── index.html
-        └── history_detail.html
-📦 Windows-Installer erstellen
-Voraussetzung: Inno Setup (iscc.exe im PATH).
+powershell
+$env:FLASK_APP = "app.leadscrapper"
+$env:FLASK_ENV = "development"
+flask run
+→ Öffne im Browser: http://127.0.0.1:5000
 
-bat
-Kopieren
-Bearbeiten
-install.bat
-Damit erzeugst du:
+🛠️ Nutzung
 
-dist_installer\leadscrapper.exe
+1. Scrapen
+   URL und Seitenzahl eingeben.
 
-Installer\LeadScrapperInstaller.exe (Setup-Programm)
+Felder auswählen (Firma, Telefon, …).
 
-🔧 Weiterentwicklung & Tests
-Modularisierung: Logik in scraper.py & utils.py gekapselt.
+Klick auf „Leads sammeln“.
 
-.env-Konfiguration: Alle Secrets und Versionen auslagerbar.
+Live-Fortschritt, Logs und Lead-Zähler beobachten.
 
-Unit-Tests: Mit pytest & Mock-Responses geplant.
+CSV wird automatisch heruntergeladen und liegt in output/.
 
-⚖️ Lizenz & Autor
-LeadScrapper – © 2025 Robert Alchimowicz
-Lizenz: MIT
-# lscrapper
+2. Historie
+   Unter „Suchhistorie“ klickst Du auf eine CSV → Detail-Ansicht.
+
+3. E-Mail-Dashboard
+   Email-Dashboard oben rechts öffnen oder über Historie-Spalte.
+
+PLZ-Filter zum Segmentieren nutzen.
+
+Text im TinyMCE-Editor anpassen.
+
+Vorschau ansehen.
+
+Senden → direkt über SMTP.
+
+📂 Projektstruktur
+
+├── app/
+│ ├── leadscrapper.py # Hauptrouten: Scrapen, CSV, History, E-Mail
+│ ├── scraper.py # HTTP-Fetch mit Retry & Proxies
+│ ├── utils.py # Pfade, History-Log, URL-Helper
+│ ├── email_templates/ # Jinja2-Vorlagen für E-Mails
+│ │ ├── first_contact.txt
+│ │ ├── follow_up.txt
+│ │ └── closing.txt
+│ ├── templates/ # HTML-Templates
+│ │ ├── base.html
+│ │ ├── index.html
+│ │ ├── history_detail.html
+│ │ ├── email_dashboard.html
+│ │ └── email_preview.html
+│ └── static/
+│ ├── script.js # Client: SSE, Logs, Download
+│ └── styles.css # Eigene Styles (optional)
+├── valid_proxies.txt # (Optional) Proxy-Liste
+├── output/ # Generierte CSVs
+├── logs/
+│ ├── app.log # App-Log
+│ └── search_history.csv # Suchhistorie
+├── requirements.txt
+├── README.md # Diese Datei
+└── .env # Deine Konfiguration
+
+🔒 Lizenz
+© 2025 Robert Alchimowicz – Alle Rechte vorbehalten.
+Diese Software ist ausschließlich für den persönlichen Gebrauch durch den Lizenzinhaber bestimmt.
+Das Kopieren, Verbreiten oder Verändern ohne ausdrückliche Erlaubnis ist untersagt.
