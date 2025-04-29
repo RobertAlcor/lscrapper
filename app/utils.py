@@ -1,3 +1,4 @@
+# utils.py
 import os
 import csv
 import logging
@@ -17,7 +18,6 @@ def init_history() -> None:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     os.makedirs(LOG_DIR, exist_ok=True)
     if not os.path.exists(HISTORY_FILE):
-        # 'utf-8-sig' schreibt einen BOM an den Anfang der Datei
         with open(HISTORY_FILE, 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.writer(f)
             writer.writerow(['Timestamp','Website','Pages','Fields','Filename'])
@@ -30,7 +30,6 @@ def log_search(
     filename: str
 ) -> None:
     """Schreibt eine neue Zeile in die History-CSV (UTF-8-SIG ohne weitere BOM)."""
-    # Beim Anhängen schreibt Python den BOM nicht erneut
     with open(HISTORY_FILE, 'a', newline='', encoding='utf-8-sig') as f:
         writer = csv.writer(f)
         writer.writerow([

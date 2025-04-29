@@ -962,3 +962,82 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'histor
 2025-04-29 16:10:39,473 ERROR root: List-URL nicht erreichbar: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
 2025-04-29 16:10:39,473 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:10:39] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=1&fields=firma,telefon,email,adresse,plz,ortname,homepage HTTP/1.1" 200 -
 2025-04-29 16:10:39,475 INFO root: CSV gespeichert: leads-installateur-wien-2025-04-29.csv
+2025-04-29 16:22:05,109 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 16:22:05,109 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 16:22:05,110 INFO werkzeug:  * Restarting with stat
+2025-04-29 16:22:05,950 WARNING werkzeug:  * Debugger is active!
+2025-04-29 16:22:05,952 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 16:22:06,204 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:22:06] "GET / HTTP/1.1" 200 -
+2025-04-29 16:22:06,290 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:22:06] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 16:22:06,291 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:22:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 16:22:06,460 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:22:06] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-29 16:22:16,320 INFO root: Seite 1: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:22:17,279 WARNING root: Fetch list 1/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+2025-04-29 16:22:24,909 WARNING root: Fetch list 2/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)')))
+2025-04-29 16:22:29,314 WARNING root: Fetch list 3/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+2025-04-29 16:22:29,314 ERROR root: List-URL nicht erreichbar: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:22:29,314 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:22:29] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=1&fields=firma,telefon,email,adresse,plz,ortname,homepage HTTP/1.1" 200 -
+2025-04-29 16:22:29,319 INFO root: CSV gespeichert: leads-installateur-wien-2025-04-29.csv
+2025-04-29 16:22:29,834 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:22:29] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 16:22:46,791 INFO root: Seite 1: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:22:56,799 WARNING root: Fetch list 1/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001FC95A5D880>, 'Connection to 3.78.92.159 timed out. (connect timeout=10)')))
+2025-04-29 16:23:08,809 WARNING root: Fetch list 2/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001FC95A5E4B0>, 'Connection to 3.122.84.99 timed out. (connect timeout=10)')))
+2025-04-29 16:23:22,819 WARNING root: Fetch list 3/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001FC95A5F620>, 'Connection to 13.36.113.81 timed out. (connect timeout=10)')))
+2025-04-29 16:23:22,819 ERROR root: List-URL nicht erreichbar: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:23:22,819 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:23:22] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=1&fields=firma,telefon,email,adresse,plz,ortname,homepage HTTP/1.1" 200 -
+2025-04-29 16:23:22,821 INFO root: CSV gespeichert: leads-installateur-wien-2025-04-29.csv
+2025-04-29 16:25:57,458 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:25:57] "GET /history/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 16:25:57,491 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:25:57] "GET /static/styles.css HTTP/1.1" 200 -
+2025-04-29 16:25:57,491 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:25:57] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-29 16:25:57,503 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:25:57] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 16:27:17,327 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\scraper.py', reloading
+2025-04-29 16:27:17,386 INFO werkzeug:  * Restarting with stat
+2025-04-29 16:27:18,226 WARNING werkzeug:  * Debugger is active!
+2025-04-29 16:27:18,229 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 16:27:18,456 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:27:18] "[33mPOST /download HTTP/1.1[0m" 404 -
+2025-04-29 16:27:18,457 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:27:18] "[33mPOST /download HTTP/1.1[0m" 404 -
+2025-04-29 16:30:15,721 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 16:30:15,721 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 16:30:15,723 INFO werkzeug:  * Restarting with stat
+2025-04-29 16:30:16,735 WARNING werkzeug:  * Debugger is active!
+2025-04-29 16:30:16,739 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 16:30:16,979 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:30:16] "GET / HTTP/1.1" 200 -
+2025-04-29 16:30:17,046 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:30:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 16:30:17,054 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:30:17] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 16:30:26,360 INFO root: Seite 1: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:30:36,374 WARNING root: Fetch 1/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001FDB6A61DC0>, 'Connection to 3.122.84.99 timed out. (connect timeout=10)'))
+2025-04-29 16:30:48,377 WARNING root: Fetch 2/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001FDB5F09FD0>, 'Connection to 13.38.176.104 timed out. (connect timeout=10)'))
+2025-04-29 16:31:02,387 WARNING root: Fetch 3/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001FDB6D02660>, 'Connection to 13.38.153.36 timed out. (connect timeout=10)'))
+2025-04-29 16:31:10,388 ERROR root: Seite nicht erreichbar oder leer: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:31:10,388 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:31:10] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=1&fields=firma,telefon,email,adresse,plz,ortname,homepage HTTP/1.1" 200 -
+2025-04-29 16:31:10,392 INFO root: CSV gespeichert: leads-installateur-wien-2025-04-29.csv
+2025-04-29 16:31:21,821 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:31:21] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 16:33:10,741 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 16:33:10,741 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 16:33:10,742 INFO werkzeug:  * Restarting with stat
+2025-04-29 16:33:11,754 WARNING werkzeug:  * Debugger is active!
+2025-04-29 16:33:11,756 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 16:33:11,998 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:33:11] "GET / HTTP/1.1" 200 -
+2025-04-29 16:33:12,056 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:33:12] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 16:33:12,066 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:33:12] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 16:33:12,242 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:33:12] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 16:33:19,777 INFO root: Seite 1: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:33:29,786 WARNING root: Fetch 1/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001D366D398E0>, 'Connection to 99.80.11.54 timed out. (connect timeout=10)'))
+2025-04-29 16:33:32,740 WARNING root: Fetch 2/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+2025-04-29 16:33:46,746 WARNING root: Fetch 3/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001D366D13E60>, 'Connection to 54.233.119.172 timed out. (connect timeout=10)'))
+2025-04-29 16:33:54,747 ERROR root: Seite nicht erreichbar oder leer: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:33:54,747 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:33:54] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=1&fields=firma,telefon,email,adresse,plz,ortname,homepage HTTP/1.1" 200 -
+2025-04-29 16:33:54,750 INFO root: CSV gespeichert: leads-installateur-wien-2025-04-29.csv
+2025-04-29 16:38:18,910 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\scraper.py', reloading
+2025-04-29 16:38:18,993 INFO werkzeug:  * Restarting with stat
+2025-04-29 16:38:19,829 WARNING werkzeug:  * Debugger is active!
+2025-04-29 16:38:19,831 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 16:38:20,062 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:38:20] "[33mPOST /download HTTP/1.1[0m" 404 -
+2025-04-29 16:45:42,000 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 16:45:42,000 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 16:56:27,170 INFO leadscrapper: Seite 1: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:56:46,534 INFO leadscrapper: CSV gespeichert: leads-installateur-wien-2025-04-29.csv
