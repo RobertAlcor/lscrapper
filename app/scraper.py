@@ -137,25 +137,25 @@ def scrape_bs4(
                         dsoup = BeautifulSoup(dr.text, 'html.parser')
 
             if dsoup:
-                if 'telefon' in fields:
-                    t = dsoup.select_one("a[href^='tel:']")
-                    lead['Telefon'] = t.get_text(strip=True) if t else '-'
-                if 'email' in fields:
-                    m = dsoup.select_one("a[href^='mailto:']")
-                    lead['Email'] = m.get('href').split('mailto:')[1] if m else '-'
-                if 'adresse' in fields:
-                    st = dsoup.select_one("meta[itemprop='streetAddress']")
-                    lead['Adresse'] = st.get('content') if st else '-'
-                if 'plz' in fields:
-                    pc = dsoup.select_one("meta[itemprop='postalCode']")
-                    lead['PLZ'] = pc.get('content') if pc else '-'
-                if 'ortname' in fields:
-                    rg = dsoup.select_one("meta[itemprop='addressRegion']")
-                    lead['Ort'] = rg.get('content') if rg else '-'
-                if 'homepage' in fields:
-                    h = dsoup.select_one("a[href^='http']:not([href*='herold.at'])")
-                    if h and (u := h.get('href')):
-                        lead['Homepage'] = u
+                    if 'telefon' in fields:
+                        t = dsoup.select_one("a[href^='tel:']")
+                        lead['Telefon'] = t.get_text(strip=True) if t else '-'
+                    if 'email' in fields:
+                        m = dsoup.select_one("a[href^='mailto:']")
+                        lead['Email'] = m.get('href').split('mailto:')[1] if m else '-'
+                    if 'adresse' in fields:
+                        st = dsoup.select_one("meta[itemprop='streetAddress']")
+                        lead['Adresse'] = st.get('content') if st else '-'
+                    if 'plz' in fields:
+                        pc = dsoup.select_one("meta[itemprop='postalCode']")
+                        lead['PLZ'] = pc.get('content') if pc else '-'
+                    if 'ortname' in fields:
+                        rg = dsoup.select_one("meta[itemprop='addressRegion']")
+                        lead['Ort'] = rg.get('content') if rg else '-'
+                    if 'homepage' in fields:
+                        h = dsoup.select_one("a[href^='http']:not([href*='herold.at'])")
+                        if h and (u := h.get('href')):
+                            lead['Homepage'] = u  # KEIN HYPERLINK mehr – nur die URL
 
             all_leads.append(lead)
 

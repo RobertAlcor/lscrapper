@@ -2,33 +2,67 @@
 {% block content %}
 <div class="container py-4">
   <h3>Email-Vorschau: {{ tpl }} – Lead #{{ idx+1 }} von {{ filename }}</h3>
+
+  <div class="mb-3">
+    <strong>Empfänger:</strong> {{ lead.Email }}
+  </div>
+  <div class="mb-3">
+    <strong>Absendername:</strong> {{ sender }}
+  </div>
   <div class="mb-3">
     <strong>Betreff:</strong> {{ subject }}
   </div>
+
   <div class="mb-3">
-    <pre class="p-3 bg-light" style="white-space: pre-wrap;">{{ body }}</pre>
+    <label><strong>E-Mail-Inhalt:</strong></label>
+    <div class="p-3 bg-light border" style="white-space: normal;">
+      {{ body | safe }}
+      {% if signature %}
+      <hr>
+      {{ signature | safe }}
+      {% endif %}
+    </div>
   </div>
+
+  <div id="status" class="alert d-none" role="alert"></div>
+
   <button id="send-btn" class="btn btn-success">Jetzt senden</button>
   <a href="{{ url_for('email_dashboard', filename=filename) }}" class="btn btn-secondary ms-2">Zurück</a>
 </div>
 
 <script>
-  // AJAX zum Abschicken via /send-email
-  document.getElementById('send-btn').addEventListener('click', () => {
-    fetch('/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        to: "{{ leads[idx].Email }}",
-        subject: "{{ subject|e }}",
-        body: "{{ body|e }}"
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('send-btn').addEventListener('click', () => {
+      const statusBox = document.getElementById('status');
+      statusBox.className = 'alert alert-info';
+      statusBox.textContent = 'Sende E-Mail…';
+      statusBox.classList.remove('d-none');
+
+      fetch('/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          to: "{{ lead.Email }}",
+          subject: "{{ subject }}",
+          body: `{{ body | safe }}{% if signature %}<br><br>{{ signature | safe }}{% endif %}`
+        })
       })
-    })
-      .then(r => r.json())
-      .then(js => {
-        if (js.status === 'ok') alert('E-Mail erfolgreich gesendet!');
-        else alert('Fehler: ' + js.message);
-      });
+        .then(response => response.json())
+        .then(js => {
+          if (js.status === 'ok') {
+            statusBox.className = 'alert alert-success';
+            statusBox.textContent = 'E-Mail erfolgreich gesendet!';
+          } else {
+            statusBox.className = 'alert alert-danger';
+            statusBox.textContent = 'Fehler: ' + js.message;
+          }
+        })
+        .catch(err => {
+          statusBox.className = 'alert alert-danger';
+          statusBox.textContent = 'Unbekannter Fehler: ' + err;
+        });
+    });
   });
 </script>
+
 {% endblock %}

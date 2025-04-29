@@ -20,6 +20,7 @@ from .utils import (
     OUTPUT_DIR, LOG_DIR,
     init_history, log_search, make_absolute
 )
+from .utils import log_sent_email
 from .scraper import _fetch_url, _fetch_url_detail
 
 # --- 1) .env laden -----------------------------------
@@ -172,28 +173,29 @@ def scrape_stream():
                             dsoup = BeautifulSoup(dr.text, 'html.parser')
 
                 if dsoup:
-                    if 'telefon'  in fields:
+                    if 'telefon' in fields:
                         t = dsoup.select_one("a[href^='tel:']")
                         lead['Telefon'] = t.get_text(strip=True) if t else '-'
-                    if 'email'    in fields:
+                    if 'email' in fields:
                         m = dsoup.select_one("a[href^='mailto:']")
                         lead['Email'] = m.get('href').split('mailto:')[1] if m else '-'
-                    if 'adresse'  in fields:
+                    if 'adresse' in fields:
                         st = dsoup.select_one("meta[itemprop='streetAddress']")
                         lead['Adresse'] = st.get('content') if st else '-'
-                    if 'plz'      in fields:
+                    if 'plz' in fields:
                         pc = dsoup.select_one("meta[itemprop='postalCode']")
                         lead['PLZ'] = pc.get('content') if pc else '-'
-                    if 'ortname'  in fields:
+                    if 'ortname' in fields:
                         rg = dsoup.select_one("meta[itemprop='addressRegion']")
                         lead['Ort'] = rg.get('content') if rg else '-'
                     if 'homepage' in fields:
                         h = dsoup.select_one("a[href^='http']:not([href*='herold.at'])")
-                        if h and (u:=h.get('href')):
-                            lead['Homepage'] = f'=HYPERLINK(\"{u}\",\"Website\")'
+                        if h and (u := h.get('href')):
+                            lead['Homepage'] = u  # KEIN HYPERLINK mehr – nur die URL
 
                 leads_accum.append(lead)
                 yield f"event: lead\ndata: {json.dumps(lead)}\n\n"
+
 
         # CSV erst nach Abschluss aller Seiten schreiben
         now    = datetime.now()
@@ -234,12 +236,13 @@ def scrape_stream():
     )
 
 # --- 5e) E-Mail versenden via SMTP -------------------
+
 @app.route('/send-email', methods=['POST'])
 def send_email():
-    data    = request.get_json()
-    to      = data['to']
+    data = request.get_json()
+    to = data['to']
     subject = data['subject']
-    body    = data['body']
+    body = data['body']
     msg = Message(
         subject,
         recipients=[to],
@@ -248,10 +251,13 @@ def send_email():
     )
     try:
         mail.send(msg)
-        return {'status':'ok'}, 200
+        log_sent_email(to, subject, 'ok')
+        return {'status': 'ok'}, 200
     except Exception as e:
         logger.error(f"SMTP-Fehler: {e}")
-        return {'status':'error','message':str(e)}, 500
+        log_sent_email(to, subject, 'error')
+        return {'status': 'error', 'message': str(e)}, 500
+
 
 # --- 6a) Email-Dashboard -----------------------------
 @app.route('/email-dashboard/<filename>', methods=['GET'])
@@ -319,6 +325,14 @@ def track_open(contact_id):
 def track_click(contact_id):
     target = request.args.get('url','/')
     return redirect(target)
+
+@app.route('/download-sent-log', methods=['GET'])
+def download_sent_log():
+    from .utils import SENT_LOG_FILE
+    if not os.path.exists(SENT_LOG_FILE):
+        flash('Noch kein Versandprotokoll vorhanden.', 'warning')
+        return redirect(url_for('index'))
+    return send_file(SENT_LOG_FILE, as_attachment=True)
 
 # --- 8) Server starten -------------------------------
 if __name__ == '__main__':

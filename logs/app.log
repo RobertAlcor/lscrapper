@@ -782,3 +782,183 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'histor
 2025-04-29 01:02:52,319 INFO werkzeug:  * Restarting with stat
 2025-04-29 01:02:53,161 WARNING werkzeug:  * Debugger is active!
 2025-04-29 01:02:53,164 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 14:43:42,687 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 14:43:42,687 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 14:43:52,787 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:43:52] "GET / HTTP/1.1" 200 -
+2025-04-29 14:43:52,889 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:43:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:43:52,902 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:43:52] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 14:43:52,977 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:43:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-29 14:43:55,199 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:43:55] "GET / HTTP/1.1" 200 -
+2025-04-29 14:43:55,228 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:43:55] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:43:55,228 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:43:55] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 14:44:01,644 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:44:01] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 14:44:01,672 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:44:01] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:44:01,678 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:44:01] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 14:46:30,963 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:46:30] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 14:46:30,990 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:46:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:46:30,994 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:46:30] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 14:46:44,417 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:46:44] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 14:46:44,442 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:46:44] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:46:44,445 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:46:44] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 14:54:09,921 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:54:09] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 14:54:10,087 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:54:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:54:10,089 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:54:10] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 14:58:40,865 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:58:40] "GET / HTTP/1.1" 200 -
+2025-04-29 14:58:40,889 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:58:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:58:40,891 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:58:40] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 14:58:43,867 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:58:43] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 14:58:43,893 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:58:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 14:58:43,895 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 14:58:43] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:00:43,373 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 15:00:43,373 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 15:00:46,033 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:00:46] "GET / HTTP/1.1" 200 -
+2025-04-29 15:00:46,093 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:00:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:00:46,101 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:00:46] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:01:28,947 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 15:01:28,947 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 15:01:28,948 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:01:29,766 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:01:29,769 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:01:30,460 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:01:30] "GET / HTTP/1.1" 200 -
+2025-04-29 15:01:30,519 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:01:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:01:30,528 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:01:30] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:01:36,529 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:01:36] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 15:01:36,550 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:01:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:01:36,554 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:01:36] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:02:34,328 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 15:02:34,328 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 15:02:34,330 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:02:35,167 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:02:35,169 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:02:35,403 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:02:35] "GET / HTTP/1.1" 200 -
+2025-04-29 15:02:35,460 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:02:35] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:02:35,468 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:02:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:02:38,125 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:02:38] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 15:02:38,150 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:02:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:02:38,152 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:02:38] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:04:52,311 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\leadscrapper.py', reloading
+2025-04-29 15:04:52,363 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:07:37,171 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 15:07:37,171 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 15:07:37,172 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:07:37,989 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:07:37,992 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:07:38,221 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:07:38] "GET / HTTP/1.1" 200 -
+2025-04-29 15:07:38,302 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:07:38] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:07:38,302 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:07:38] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:07:40,704 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:07:40] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 15:07:40,729 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:07:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:07:40,730 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:07:40] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:13:37,767 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\leadscrapper.py', reloading
+2025-04-29 15:13:37,825 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:14:33,993 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 15:14:33,993 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 15:14:33,995 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:14:34,832 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:14:34,834 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:14:35,073 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:14:35] "GET / HTTP/1.1" 200 -
+2025-04-29 15:14:35,136 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:14:35] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:14:35,143 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:14:35] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:14:35,251 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:14:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-29 15:14:39,029 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:14:39] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 15:14:39,052 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:14:39] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:14:39,055 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:14:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:15:30,063 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\leadscrapper.py', reloading
+2025-04-29 15:15:30,131 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:15:30,970 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:15:30,972 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:15:31,297 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:15:31] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 15:15:31,360 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:15:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:15:31,369 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:15:31] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:15:44,839 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\scraper.py', reloading
+2025-04-29 15:15:44,889 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:15:45,721 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:15:45,724 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:15:51,008 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\scraper.py', reloading
+2025-04-29 15:15:51,058 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:15:51,867 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:15:51,868 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:15:57,179 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\scraper.py', reloading
+2025-04-29 15:15:57,238 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:15:58,048 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:15:58,050 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:16:05,765 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\scraper.py', reloading
+2025-04-29 15:16:05,821 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:16:06,645 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:16:06,647 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:16:09,262 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:16:09] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 15:16:09,340 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:16:09] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:16:09,346 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:16:09] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:54:17,204 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:54:17] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 15:54:17,230 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:54:17] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:54:17,230 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:54:17] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:54:19,840 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:54:19] "GET / HTTP/1.1" 200 -
+2025-04-29 15:54:19,863 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:54:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:54:19,864 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:54:19] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:54:48,659 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\utils.py', reloading
+2025-04-29 15:54:48,714 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:54:50,791 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:54:50,794 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:55:15,633 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\leadscrapper.py', reloading
+2025-04-29 15:55:15,686 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:55:16,517 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:55:16,519 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:55:38,844 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\leadscrapper.py', reloading
+2025-04-29 15:55:38,896 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:55:39,761 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:55:39,763 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:55:42,633 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\leadscrapper.py', reloading
+2025-04-29 15:55:42,681 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:55:43,529 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:55:43,531 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:58:24,724 INFO werkzeug:  * Detected change in 'C:\\xampp\\htdocs\\LeadScrapper_Alcor\\app\\leadscrapper.py', reloading
+2025-04-29 15:58:24,776 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:58:25,617 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:58:25,620 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:58:31,220 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:58:31] "GET / HTTP/1.1" 200 -
+2025-04-29 15:58:31,294 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:58:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:58:31,297 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:58:31] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:58:42,153 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 15:58:42,153 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 15:58:42,154 INFO werkzeug:  * Restarting with stat
+2025-04-29 15:58:42,996 WARNING werkzeug:  * Debugger is active!
+2025-04-29 15:58:42,999 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 15:58:43,230 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:58:43] "GET / HTTP/1.1" 200 -
+2025-04-29 15:58:43,303 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:58:43] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 15:58:43,305 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:58:43] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:58:46,558 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:58:46] "GET /email-dashboard/leads-installateur-wien-2025-04-29.csv HTTP/1.1" 200 -
+2025-04-29 15:58:46,582 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:58:46] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 15:58:46,584 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 15:58:46] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 16:08:57,642 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-29 16:08:57,643 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2025-04-29 16:08:57,644 INFO werkzeug:  * Restarting with stat
+2025-04-29 16:08:58,482 WARNING werkzeug:  * Debugger is active!
+2025-04-29 16:08:58,485 INFO werkzeug:  * Debugger PIN: 862-041-702
+2025-04-29 16:08:58,717 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:08:58] "GET / HTTP/1.1" 200 -
+2025-04-29 16:08:58,774 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:08:58] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 16:08:58,784 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:08:58] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 16:09:12,584 INFO root: Seite 1: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:09:13,075 WARNING root: Fetch list 1/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+2025-04-29 16:09:15,239 WARNING root: Fetch list 2/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)')))
+2025-04-29 16:09:29,255 WARNING root: Fetch list 3/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000026DFDBBA360>, 'Connection to 63.32.1.88 timed out. (connect timeout=10)')))
+2025-04-29 16:09:29,255 ERROR root: List-URL nicht erreichbar: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:09:29,255 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:09:29] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=1&fields=firma,telefon,email,adresse,plz,ortname,homepage HTTP/1.1" 200 -
+2025-04-29 16:09:29,263 INFO root: CSV gespeichert: leads-installateur-wien-2025-04-29.csv
+2025-04-29 16:09:54,784 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:09:54] "GET / HTTP/1.1" 200 -
+2025-04-29 16:09:54,807 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:09:54] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-04-29 16:09:54,809 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:09:54] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-29 16:10:14,764 INFO root: Seite 1: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:10:16,359 WARNING root: Fetch list 1/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+2025-04-29 16:10:25,469 WARNING root: Fetch list 2/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)')))
+2025-04-29 16:10:39,473 WARNING root: Fetch list 3/3 fehlgeschlagen: HTTPSConnectionPool(host='www.herold.at', port=443): Max retries exceeded with url: /gelbe-seiten/wien/installateur/?page=1 (Caused by ProxyError('Unable to connect to proxy', ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000026DFDBB9D00>, 'Connection to 3.123.150.192 timed out. (connect timeout=10)')))
+2025-04-29 16:10:39,473 ERROR root: List-URL nicht erreichbar: https://www.herold.at/gelbe-seiten/wien/installateur/?page=1
+2025-04-29 16:10:39,473 INFO werkzeug: 127.0.0.1 - - [29/Apr/2025 16:10:39] "GET /scrape-stream?site=https://www.herold.at/gelbe-seiten/wien/installateur/&pages=1&fields=firma,telefon,email,adresse,plz,ortname,homepage HTTP/1.1" 200 -
+2025-04-29 16:10:39,475 INFO root: CSV gespeichert: leads-installateur-wien-2025-04-29.csv

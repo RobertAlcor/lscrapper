@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          Lizenzschlüssel eingeben
+        </div>
+        <div class="card-body">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+          {% for cat,msg in messages %}
+          <div class="alert alert-{{cat}}">{{msg}}</div>
+          {% endfor %}
+          {% endwith %}
+          <form method="POST">
+            <div class="mb-3">
+              <label for="license_key" class="form-label">Lizenzschlüssel</label>
+              <input type="text" class="form-control" id="license_key" name="license_key" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Aktivieren</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

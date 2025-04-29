@@ -46,3 +46,20 @@ def make_absolute(href: str) -> str:
     if href.startswith('/'):
         return 'https://www.herold.at' + href
     return href
+
+SENT_LOG_FILE = os.path.join(LOG_DIR, 'sent_log.csv')
+
+def log_sent_email(to: str, subject: str, status: str) -> None:
+    """Schreibt einen Versandvorgang in das Log."""
+    if not os.path.exists(SENT_LOG_FILE):
+        with open(SENT_LOG_FILE, 'w', newline='', encoding='utf-8-sig') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Timestamp', 'Empfänger', 'Betreff', 'Status'])
+    with open(SENT_LOG_FILE, 'a', newline='', encoding='utf-8-sig') as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            datetime.now().isoformat(timespec='seconds'),
+            to,
+            subject,
+            status
+        ])
